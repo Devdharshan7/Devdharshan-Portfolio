@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">MyPortfolio</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#admin">Admin</a></li>
+    </ul>
+    <button id="theme-toggle" class="btn-theme">🌙 Dark Mode</button>
+  </nav>
+
+  <main class="container">
+    <!-- About Section -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Hello! I am a web developer creating interactive and responsive web applications.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5 / CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React.js</li>
+        <li>Git / GitHub</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <p>Check out my active web development projects below!</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="card">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required placeholder="Your Email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" rows="4" required placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <div id="form-status" class="status-msg"></div>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin" class="card">
+      <h2>Admin Portal</h2>
+      
+      <!-- Admin Login Form -->
+      <form id="admin-login-form">
+        <div class="form-group">
+          <label for="admin-pass">Admin Password:</label>
+          <input type="password" id="admin-pass" required placeholder="Enter password (default: admin123)">
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div id="login-error" class="error-msg"></div>
+      </form>
+
+      <!-- Dynamic Response Section (Replaces Login on Success) -->
+      <div id="admin-dashboard" class="hidden">
+        <div class="admin-header">
+          <h3>Received User Responses</h3>
+          <button id="logout-btn" class="btn-secondary">Logout</button>
+        </div>
+        <div id="responses-container"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Developer Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
